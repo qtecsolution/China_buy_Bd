@@ -1,2 +1,123 @@
 @use "../../global" as *;
 @use "../../partials" as *;
+
+header {
+  .headertop {
+    background-color: $ggray8;
+    height: size(80);
+    .headercontent {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .logo {
+        flex-shrink: 0;
+      }
+      .searchbox {
+        @include flex;
+
+        .search-input {
+          border: 1px solid $ggray5;
+          @include radius(6);
+          padding: size(13) size(16);
+          background: transparent;
+          color: white;
+          @include transitionsbackground;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          width: size(300);
+          font-family: Poppins;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 21px;
+          text-align: left;
+          @include breakpoint(tab992) {
+            width: size(400);
+          }
+
+          &::placeholder {
+            color: $gray1;
+            //styleName: Body Small/Body Small, 600;
+            font-family: Poppins;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 21px;
+            text-align: left;
+          }
+          &:focus {
+            border-color: $brandingsuccess;
+          }
+        }
+        .uploadbox {
+          display: none;
+        }
+        .btn-search {
+          background-color: $brandingsuccess;
+          color: white;
+          @include flex;
+          align-items: center;
+          padding: size(14) size(24);
+          gap: size(8);
+          border-top-right-radius: size(6);
+          border-bottom-right-radius: size(6);
+          //styleName: Body Small/Body Small, 600;
+          font-family: Poppins;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 16.8px;
+          text-align: left;
+        }
+      }
+      .rightcontent {
+        @include flex;
+        gap: size(16);
+        align-items: center;
+        .cartmenu {
+          @include flex;
+          align-items: center;
+          gap: size(12);
+          .left {
+            position: relative;
+            .counter {
+              position: absolute;
+              width: 18px;
+              height: 18px;
+              top: -2px;
+              left: 18px;
+              @include circle;
+              @include flex-center;
+              border: 1px solid white;
+              color: white;
+              font-family: Poppins;
+              font-size: 10px;
+              font-weight: 500;
+              line-height: 10px;
+              text-align: center;
+
+              background-color: $brandingsuccess;
+            }
+          }
+          .right {
+            color: white;
+            @include flex-column;
+            gap: size(7);
+
+            .title {
+              font-family: Poppins;
+              font-size: 11px;
+              font-weight: 400;
+              line-height: 13.2px;
+              text-align: left;
+            }
+            .price {
+              font-family: Poppins;
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 14px;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}
