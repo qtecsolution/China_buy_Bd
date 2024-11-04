@@ -1,2 +1,46 @@
 @use "../../global" as *;
 @use "../../partials" as *;
+
+.footer {
+  background-color: $ggray9;
+  .footercontent {
+    position: relative;
+  }
+  .footertop {
+    background-color: $brandingsuccess;
+    padding: size(25) size(30);
+    @include radius(10);
+    position: absolute;
+    width: 100%;
+    top: -50px;
+
+    .footertopitem {
+      @include flex;
+      align-items: center;
+      gap: size(24);
+      .right {
+        @include flex-column;
+        .title {
+          font-family: Inter;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 27px;
+          text-align: left;
+          color: white;
+        }
+        .text {
+          font-family: Inter;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 24px;
+          text-align: left;
+          color: white;
+        }
+      }
+    }
+  }
+  .footermiddle {
+    // margin-top: 100px;
+    padding-top: 100px;
+  }
+}
