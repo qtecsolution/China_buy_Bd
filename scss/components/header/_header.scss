@@ -3,7 +3,7 @@
 
 header {
   .headertop {
-    background-color: $ggray8;
+    background-color: $ggray9;
     height: size(80);
     .headercontent {
       display: flex;
@@ -118,6 +118,63 @@ header {
           }
         }
       }
+    }
+  }
+  .headerbottom {
+    @include flex-between;
+    background-color: $ggray8;
+    height: size(48);
+    .headerbottomcontent {
+      @include flex-between;
+      align-items: center;
+    }
+    .headermenu {
+      @include flex;
+      color: white;
+      list-style: none;
+      gap: size(40);
+      .allcategory {
+        color: $brandingsuccessbright;
+      }
+
+      a {
+        //styleName: Body Small/Body Small, 500;
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+        text-align: left;
+        color: white;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: $brandingsuccess;
+          transform: scaleX(0);
+          transition: transform 0.3s ease-in-out;
+        }
+        &:hover::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+    .profilebtn {
+      @include flex;
+      gap: size(10);
+      padding: size(3.5) size(8);
+      //styleName: Body Small/Body Small, 400;
+      font-family: Poppins;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      text-align: left;
+      background-color: $brandingsuccess;
+      color: white;
+      @include radius(6);
     }
   }
 }
