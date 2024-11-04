@@ -1,0 +1,229 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+// .sharemodal {
+//   .modal-dialog {
+//     max-width: size(608);
+//     width: 90%;
+//   }
+//   .modal-content {
+//     border-radius: size(24);
+//   }
+//   .modal-header {
+//     justify-content: space-between;
+//     padding: size(24);
+//     .modal-title {
+//       //styleName: 18px/p1/SemiBold;
+//       font-family: $sf-semibold;
+//       font-size: 18px;
+//       font-weight: 600;
+//       line-height: 25.2px;
+//       letter-spacing: 0.005em;
+//     }
+//     .modal-des {
+//       font-family: $sf-light;
+//       font-size: 16px;
+//       font-weight: 400;
+//       line-height: 22.4px;
+//       letter-spacing: 0.005em;
+//       text-align: left;
+//       color: $dark-40;
+//     }
+//   }
+//   .modal-body {
+//     @include flex-column;
+//     gap: size(24);
+//     padding: size(24);
+//   }
+//   .modalbox {
+//     @include flex-column;
+//     gap: size(10);
+//     .sharetitle {
+//       font-family: $sf-medium;
+//       font-size: 14px;
+//       font-weight: 500;
+//       line-height: 20px;
+//       color: #344054;
+//     }
+//     .sharelinks {
+//       @include list-horizontal;
+//       gap: size(16);
+//       .sharelink {
+//         @include border(solid, 1, $grey-40);
+//         @include circle;
+//         @include square(48);
+//         @include flex-center;
+//         transition: background 0.3s ease-in-out;
+//         cursor: pointer;
+//         @include hover {
+//           background-color: #f5f5f6;
+//         }
+//       }
+//     }
+//     .copybox {
+//       @include flex;
+//       justify-content: space-between;
+//       @include border(solid, 1, $grey-40);
+//       @include radius(12);
+//       padding: size(6);
+//       .copyinput {
+//         flex-grow: 1;
+//         padding: size(10);
+//         color: $dark-100;
+
+//         /* 14px/p3/Medium */
+//         font-family: $sf-medium;
+//         font-size: 14px;
+//         font-style: normal;
+//         font-weight: 500;
+//         line-height: 140%; /* 19.6px */
+//         letter-spacing: -0.14px;
+//       }
+//       .btncopy {
+//         @include setBgColor($black, $white);
+//         @include radius(8);
+//         @include flex-center;
+//         padding: size(10) size(20);
+//         //styleName: 14px/p3/Medium;
+//         font-family: $sf-medium;
+//         font-size: 14px;
+//         font-weight: 500;
+//         line-height: 19.6px;
+//         letter-spacing: -0.01em;
+//         text-align: left;
+//         transition: transform 0.2s ease-in-out;
+//       }
+//       .btncopied {
+//         animation: bounce 0.6s ease;
+//         @include setBgColor(#079455, $white);
+//         @include radius(8);
+//         padding: size(10) size(20);
+//         //styleName: 14px/p3/Medium;
+//         font-family: $sf-medium;
+//         font-size: 14px;
+//         font-weight: 500;
+//         line-height: 19.6px;
+//         letter-spacing: -0.01em;
+//         @include flex;
+//         align-items: center;
+//         gap: size(4);
+//       }
+//     }
+//   }
+// }
+
+// .search-modal {
+//   .modal-dialog {
+//     max-width: size(588);
+//   }
+//   .modal-content {
+//     @include radius(18);
+//   }
+//   &-header {
+//     gap: size(10);
+//     .search-form {
+//       width: 100%;
+//       @include flex-center;
+//       gap: size(8);
+//       svg {
+//         width: size(24);
+//         height: size(24);
+//       }
+//       .search-input {
+//         margin-top: size(3);
+//         width: 100%;
+//         &::placeholder {
+//           color: #747476;
+//           font-family: $sf-medium;
+//           font-size: size(16);
+//           font-weight: 500;
+//           line-height: 150%;
+//           letter-spacing: -0.08px;
+//         }
+//       }
+//     }
+//   }
+//   &-body {
+//     .title {
+//       color: #050505;
+//       font-family: $sf-semibold;
+//       font-size: size(18);
+//       font-weight: 600;
+//       line-height: 140%;
+//       letter-spacing: 0.09px;
+//     }
+//     .recently-viewed-card {
+//       display: flex;
+//       align-items: center;
+//       justify-content: flex-start;
+//       gap: size(12);
+//       border-bottom: 1px solid #ececed;
+//       padding: size(12) 0;
+//       .card-img {
+//         width: size(48);
+//         height: size(48);
+//         @include circle;
+//         img {
+//           width: size(48);
+//           height: size(48);
+//           flex-shrink: 0;
+//           @include circle;
+//         }
+//       }
+//       .card-body {
+//         .card-title {
+//           color: #050505;
+//           font-family: $sf-medium;
+//           font-size: size(16);
+//           font-weight: 500;
+//           line-height: 150%;
+//           letter-spacing: -0.08px;
+//         }
+//         .card-list {
+//           display: flex;
+//           align-items: center;
+//           gap: size(16);
+//           list-style: none;
+//           &-item {
+//             color: #747476;
+//             font-family: $sf-medium;
+//             font-size: size(12);
+//             font-weight: 500;
+//             line-height: 130%;
+//             letter-spacing: 0.049px;
+//             position: relative;
+//             span {
+//               color: #155eef;
+//             }
+//             &:first-child {
+//               &::after {
+//                 display: none;
+//               }
+//             }
+//             &::after {
+//               content: "";
+//               position: absolute;
+//               top: size(5);
+//               left: size(-10);
+//               display: inline-block;
+//               width: size(4);
+//               height: size(4);
+//               @include circle;
+//               background-color: #747476;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// @keyframes bounce {
+//   0%,
+//   100% {
+//     transform: scale(1);
+//   }
+//   50% {
+//     transform: scale(1.1);
+//   }
+// }

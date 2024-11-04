@@ -1,0 +1,90 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+// .inputbox {
+//   @include flex-column;
+//   gap: size(6);
+//   position: relative;
+//   &.withlefticon {
+//     .inputfield {
+//       padding-left: size(40);
+//     }
+//   }
+
+//   .inputlabel {
+//     //styleName: 14px/p3/Medium;
+//     font-family: $sf-medium;
+//     font-size: 14px;
+//     font-weight: 500;
+//     line-height: 19.6px;
+//     letter-spacing: -0.01em;
+//     color: $dark-50;
+
+//     .required {
+//       color: #f04438;
+//     }
+//   }
+//   .inputfield {
+//     padding: size(12);
+//     @include border(solid, 1, $grey-40);
+//     @include radius(8);
+
+//     font-family: $sf-light;
+//     font-size: 14px;
+//     font-weight: 400;
+//     line-height: 19.6px;
+//     letter-spacing: 0.005em;
+//     color: $dark-100;
+//     @include transitionsall;
+
+//     &:focus {
+//       border-color: $blue-80;
+//     }
+//     &::placeholder {
+//       font-family: $sf-light;
+//       font-size: 14px;
+//       font-weight: 400;
+//       line-height: 19.6px;
+//       letter-spacing: 0.005em;
+//       color: $dark-40;
+//     }
+//     &:disabled {
+//       background-color: $grey-20;
+//       border: none;
+//     }
+//   }
+//   .eye {
+//     position: absolute;
+//     right: 10px;
+//     top: 50%;
+//   }
+//   .lefticon {
+//     position: absolute;
+//     left: 10px;
+//     top: 48%;
+//   }
+// }
+
+// .biobox {
+//   @include flex-column;
+//   gap: size(6);
+//   position: relative;
+
+//   .inputlabel {
+//     //styleName: 14px/p3/Medium;
+//     font-family: $sf-medium;
+//     font-size: 14px;
+//     font-weight: 500;
+//     line-height: 19.6px;
+//     letter-spacing: -0.01em;
+//     color: $dark-100;
+
+//     .required {
+//       color: #f04438;
+//     }
+//   }
+//   .inputfield {
+//   }
+// }
+
+/* Main container styles */

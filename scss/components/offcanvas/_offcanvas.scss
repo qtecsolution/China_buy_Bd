@@ -1,0 +1,284 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+// .mobileMenuOffCanvas.offcanvas {
+//   &.offcanvas-start {
+//     width: size(350);
+//   }
+
+//   background-color: $white;
+
+//   .offcanvas-header {
+//     padding: size(24) size(16) size(12) size(16);
+//     .menu-close-btn {
+//       border: none;
+//       background: transparent;
+//       svg {
+//         width: size(24);
+//         height: size(24);
+//       }
+//     }
+//   }
+
+//   .offcanvas-body {
+//     padding: size(12) size(16);
+//     .offcanvas-title {
+//       color: #747476;
+//       font-family: "SF UI Display";
+//       font-size: size(14);
+//       font-weight: 500;
+//       line-height: 140%;
+//       letter-spacing: -0.14px;
+//       margin-bottom: size(8);
+//     }
+//     .menu-list {
+//       list-style: none;
+//       padding: 0;
+//       display: flex;
+//       flex-direction: column;
+//       gap: size(4);
+//       .menu-item {
+//         padding: size(10);
+//         @include radius(12);
+//         &:hover {
+//           background: #f7f6f2;
+//         }
+//         &.active {
+//           background: #f7f6f2;
+//           position: relative;
+//           &::after {
+//             content: "";
+//             position: absolute;
+//             left: size(-16);
+//             top: size(8);
+//             width: size(4);
+//             height: size(24);
+//             @include radius(4);
+//             background: #050505;
+//           }
+//         }
+//         .menu-link {
+//           display: flex;
+//           align-items: center;
+//           gap: size(8);
+//           text-decoration: none;
+//           .menu-icon {
+//             svg {
+//               width: size(24);
+//               height: size(24);
+//             }
+//           }
+//           .menu-text {
+//             color: #454648;
+//             font-family: "SF UI Display";
+//             font-size: size(16);
+//             font-weight: 500;
+//             line-height: 150%;
+//             letter-spacing: -0.08px;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   .offcanvas-footer {
+//     // padding: size(12) size(16);
+//     .footer-menu {
+//       list-style: none;
+//       padding: size(12) size(16) size(24) size(16);
+//       display: flex;
+//       flex-direction: column;
+//       gap: size(12);
+
+//       .footer-menu-item {
+//         padding: size(10);
+//         @include radius(12);
+//         &:hover {
+//           background: #f7f6f2;
+//         }
+//       }
+//       .footer-menu-link {
+//         display: flex;
+//         align-items: center;
+//         gap: size(8);
+//         text-decoration: none;
+//       }
+//       .footer-menu-icon {
+//         svg {
+//           width: size(24);
+//           height: size(24);
+//         }
+//       }
+//       .footer-menu-text {
+//         color: #454648;
+//         font-family: "SF UI Display";
+//         font-size: size(16);
+//         font-weight: 500;
+//         line-height: 150%;
+//         letter-spacing: -0.08px;
+//       }
+//     }
+//   }
+// }
+// .userOffcanvas.offcanvas {
+//   &.offcanvas-start {
+//     width: size(390);
+//   }
+
+//   background-color: $white;
+
+//   .offcanvas-header {
+//     padding: size(24) size(16) size(12) size(16);
+//     .close-btn {
+//       width: size(24);
+//       height: size(24);
+//     }
+//     .text {
+//       margin-top: size(4);
+//       color: #17181a;
+//       font-family: $sf-medium;
+//       font-size: size(16);
+//       font-weight: 500;
+//       line-height: 150%;
+//       letter-spacing: -0.08px;
+//     }
+//   }
+
+//   .offcanvas-body {
+//     margin-top: size(14);
+//     .userInfo {
+//       .userImage {
+//         width: 64px;
+//         height: 64px;
+//         @include circle;
+//       }
+//       .userName {
+//         color: #17181a;
+//         font-family: $sf-semibold;
+//         font-size: size(18);
+//         font-weight: 600;
+//         line-height: 140%;
+//         letter-spacing: -0.14px;
+
+//         display: -webkit-box;
+//         -webkit-box-orient: vertical;
+//         overflow: hidden;
+//         text-overflow: ellipsis;
+//         -webkit-line-clamp: 1;
+//       }
+//       .userRole {
+//         padding: 0px size(2);
+//         @include radius(4);
+//         background: #f2f4f7;
+//         color: #667085;
+//         text-align: center;
+//         font-family: $primaryFont;
+//         font-size: size(12);
+//         font-weight: 500;
+//         line-height: size(16);
+//         width: size(40);
+//       }
+//     }
+
+//     .plan-info {
+//       margin-top: size(24);
+//       margin-bottom: size(16);
+//       display: flex;
+//       padding: size(12);
+//       flex-direction: column;
+//       align-items: flex-start;
+//       gap: size(12);
+//       align-self: stretch;
+//       @include radius(12);
+//       background: #fef7c3;
+//       .plan-text {
+//         color: #454648;
+//         font-family: $sf-light;
+//         font-size: size(16);
+//         line-height: 140%;
+//         letter-spacing: 0.07px;
+//       }
+//       .upgrade-btn {
+//         color: #5720b7;
+//         font-family: $sf-semibold;
+//         font-size: size(16);
+//         font-weight: 600;
+//         line-height: 140%;
+//         letter-spacing: -0.14px;
+//         text-decoration: none;
+//       }
+//     }
+
+//     .dropDown-footer {
+//       .dropDown-item {
+//         .dropDown-link {
+//           text-decoration: none;
+//           padding: size(12);
+//           width: 100%;
+//           display: flex;
+//           align-items: center;
+
+//           color: #17181a;
+//           font-family: $sf-medium;
+//           font-size: size(16);
+//           font-weight: 500;
+//           line-height: 140%;
+//           letter-spacing: -0.14px;
+//           @include radius(8);
+//           span {
+//             color: #17181a;
+//             font-family: $sf-medium;
+//             font-size: size(16);
+//             font-weight: 500;
+//             line-height: 140%;
+//             letter-spacing: -0.14px;
+//             transition: all 0.3s ease-in-out;
+//           }
+//           &:hover {
+//             background: #f7f6f2;
+//           }
+//           svg {
+//             width: size(16);
+//             height: size(16);
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   .offcanvas-footer {
+//     padding: size(0) size(16);
+//     .dropDown-link {
+//       text-decoration: none;
+//       padding: size(12);
+//       width: 100%;
+//       display: flex;
+//       align-items: center;
+//       gap: size(8);
+
+//       color: #17181a;
+//       font-family: $sf-medium;
+//       font-size: size(16);
+//       font-weight: 500;
+//       line-height: 140%;
+//       letter-spacing: -0.14px;
+//       @include radius(8);
+//       span {
+//         color: #17181a;
+//         font-family: $sf-medium;
+//         font-size: size(16);
+//         font-weight: 500;
+//         line-height: 140%;
+//         letter-spacing: -0.14px;
+//         transition: all 0.3s ease-in-out;
+//       }
+//       &:hover {
+//         background: #f7f6f2;
+//       }
+//       svg {
+//         width: size(16);
+//         height: size(16);
+//       }
+//     }
+//   }
+// }
