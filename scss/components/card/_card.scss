@@ -6,16 +6,22 @@
   background-color: #fff;
   border-radius: 10px;
   padding: size(10);
-  max-width: size(240);
+  @include breakpoint(mobile576) {
+    max-width: size(240);
+  }
 
   border-radius: 10px;
   border: 1px solid var(--Gren-Gray-Scale-100, #dae1e5);
   background: var(--colors-nutral-white-white-main, #fff);
   transition: transform 0.3s ease;
   cursor: pointer;
+  @include transitionsall;
 
   &:hover {
-    transform: translateY(-5px); // Hover effect
+    border-color: $brandingsuccess;
+    .product-title {
+      color: $brandingsuccess !important;
+    }
   }
 
   // Sale badge
@@ -56,6 +62,7 @@
       overflow: hidden;
       color: var(--Gray-Scale-Gray-700, #4d4d4d);
       text-overflow: ellipsis;
+      @include transitionscolor;
 
       /* Body Tiny/Body Tiny, 400 */
       font-family: Poppins;

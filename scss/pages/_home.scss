@@ -4,10 +4,35 @@
 .products {
 }
 .productssections {
+  // @include flex-column;
+  // gap: size(40);
+}
+.productsection1 {
+  width: 100%;
+  max-width: 100%; /* Restrict to parent width */
+  position: relative;
+  overflow-x: hidden;
 }
 .productsection {
+  border-radius: 10px;
+  @include flex-column;
+  gap: size(20);
+  padding: size(25) size(22);
+  border: 1px solid var(--Gray-Scale-Gray-100, #e6e6e6);
+  background: var(--colors-nutral-white-white-main, #fff);
   .section-top {
     @include flex-between;
+    .left {
+      h4 {
+        color: var(--Gren-Gray-Scale-700, #2b3d57);
+        /* Body XL/Body XL, 500 */
+        font-family: Poppins;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; /* 30px */
+      }
+    }
   }
 
   .productsgrid {
@@ -45,6 +70,25 @@
         5,
         1fr
       ); /* 5 columns on extra-large screens (desktop) */
+    }
+  }
+}
+
+.prevnext {
+  @include flex;
+  gap: size(10);
+  button {
+    background-color: $brandingsuccess;
+    @include square(36);
+    @include circle;
+    @include flex-center;
+    &:disabled {
+      background-color: lighten(
+        $brandingsuccess,
+        20%
+      ); // Lighten background when disabled
+      opacity: 0.5; // Reduce opacity for a disabled look
+      cursor: not-allowed; // Change cursor to not-allowed to indicate disabled state
     }
   }
 }

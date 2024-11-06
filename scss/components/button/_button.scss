@@ -18,3 +18,27 @@ button,
     outline: none;
   }
 }
+
+.viewall {
+  border-radius: 6px;
+  background: var(--Branding-Success, #33be7b);
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: white;
+  color: var(--Gray-Scale-White, var(--colors-nutral-white-white-main, #fff));
+  text-align: right;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px; /* 150% */
+  text-transform: capitalize;
+  padding: size(7) size(30);
+  @include transitionsbackground;
+  @include hover {
+    background: darken($brandingsuccess, 15%);
+  }
+}
