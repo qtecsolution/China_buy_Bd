@@ -184,6 +184,7 @@ body {
 
 main {
   flex-grow: 1;
+  min-height: 50vh;
 }
 
 .body::-webkit-scrollbar {
@@ -394,9 +395,107 @@ button:focus,
   outline: none;
 }
 
+.product-card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 0.625rem;
+  max-width: 15rem;
+  border-radius: 10px;
+  border: 1px solid var(--Gren-Gray-Scale-100, #dae1e5);
+  background: var(--colors-nutral-white-white-main, #fff);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+}
+.product-card .sale-badge {
+  position: absolute;
+  top: 20px;
+  left: 17px;
+  background-color: #ea4b48;
+  color: var(--Gray-Scale-White, var(--colors-nutral-white-white-main, #fff));
+  /* Body Tiny/Body Tiny, 500 */
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%; /* 15.6px */
+  padding: 0.1875rem 0.5rem;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+}
+.product-card .product-image {
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+.product-card .product-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.product-card .product-info .product-title {
+  overflow: hidden;
+  color: var(--Gray-Scale-Gray-700, #4d4d4d);
+  text-overflow: ellipsis;
+  /* Body Tiny/Body Tiny, 400 */
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 15.6px */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.product-card .product-info .product-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.product-card .product-info .product-details .price {
+  color: var(--Gray-Scale-Gray-900, #1a1a1a);
+  /* Body Small/Body Small, 600 */
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 16.8px */
+}
+.product-card .product-info .product-details .sold-count {
+  overflow: hidden;
+  color: var(--Gren-Gray-Scale-400, #7a9099);
+  text-align: right;
+  text-overflow: ellipsis;
+  /* Body Tiny/Body Tiny, 400 */
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 15.6px */
+}
+
 header .headertop {
   background-color: #001426;
   height: 5rem;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
 }
 header .headertop .headercontent {
   display: flex;
@@ -586,6 +685,10 @@ header .headerbottom .profilebtn {
   -ms-border-radius: 0.375rem;
   -o-border-radius: 0.375rem;
   border-radius: 0.375rem;
+}
+
+.gap {
+  height: 5rem;
 }
 
 .footer {
@@ -915,6 +1018,37 @@ header .headerbottom .profilebtn {
 }
 
 /* Main container styles */
+.productsection .section-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.productsection .productsgrid {
+  display: grid;
+  gap: 1rem; /* Adjust the gap between items as needed */
+  grid-template-columns: repeat(2, 1fr); /* Default for smaller screens (2 columns) */
+}
+@media (min-width: 768px) {
+  .productsection .productsgrid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+  }
+}
+@media (min-width: 992px) {
+  .productsection .productsgrid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on large screens */
+  }
+}
+@media (min-width: 1200px) {
+  .productsection .productsgrid {
+    grid-template-columns: repeat(4, 1fr); /* 5 columns on extra-large screens (desktop) */
+  }
+}
+@media (min-width: 1600px) {
+  .productsection .productsgrid {
+    grid-template-columns: repeat(5, 1fr); /* 5 columns on extra-large screens (desktop) */
+  }
+}
+
 .printshop-container {
   max-width: 90%;
   margin-inline: auto;

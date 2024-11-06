@@ -1,2 +1,50 @@
 @use "../global" as *;
 @use "../partials" as *;
+
+.products {
+}
+.productssections {
+}
+.productsection {
+  .section-top {
+    @include flex-between;
+  }
+
+  .productsgrid {
+    display: grid;
+    gap: size(16); /* Adjust the gap between items as needed */
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Default for smaller screens (2 columns) */
+  }
+
+  @media (min-width: 768px) {
+    .productsgrid {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+    }
+  }
+
+  @media (min-width: 992px) {
+    .productsgrid {
+      grid-template-columns: repeat(4, 1fr); /* 4 columns on large screens */
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .productsgrid {
+      grid-template-columns: repeat(
+        4,
+        1fr
+      ); /* 5 columns on extra-large screens (desktop) */
+    }
+  }
+  @media (min-width: 1600px) {
+    .productsgrid {
+      grid-template-columns: repeat(
+        5,
+        1fr
+      ); /* 5 columns on extra-large screens (desktop) */
+    }
+  }
+}

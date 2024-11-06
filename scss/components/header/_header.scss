@@ -5,6 +5,11 @@ header {
   .headertop {
     background-color: $ggray9;
     height: size(80);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
     .headercontent {
       display: flex;
       align-items: center;
@@ -177,4 +182,8 @@ header {
       @include radius(6);
     }
   }
+}
+
+.gap {
+  height: size(80);
 }

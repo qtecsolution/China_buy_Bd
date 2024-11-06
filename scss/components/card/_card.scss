@@ -1,2 +1,104 @@
 @use "../../global" as *;
 @use "../../partials" as *;
+
+.product-card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: size(10);
+  max-width: size(240);
+
+  border-radius: 10px;
+  border: 1px solid var(--Gren-Gray-Scale-100, #dae1e5);
+  background: var(--colors-nutral-white-white-main, #fff);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-5px); // Hover effect
+  }
+
+  // Sale badge
+  .sale-badge {
+    position: absolute;
+    top: 20px;
+    left: 17px;
+    background-color: $brandingerror;
+    color: var(--Gray-Scale-White, var(--colors-nutral-white-white-main, #fff));
+
+    /* Body Tiny/Body Tiny, 500 */
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 15.6px */
+    padding: size(3) size(8);
+    @include radius(4);
+  }
+
+  // Product image
+  .product-image {
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    @include radius(8);
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+  }
+
+  // Product info container
+  .product-info {
+    .product-title {
+      overflow: hidden;
+      color: var(--Gray-Scale-Gray-700, #4d4d4d);
+      text-overflow: ellipsis;
+
+      /* Body Tiny/Body Tiny, 400 */
+      font-family: Poppins;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%; /* 15.6px */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    // Product details section (price and sold count)
+    .product-details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: size(8);
+
+      .price {
+        color: var(--Gray-Scale-Gray-900, #1a1a1a);
+
+        /* Body Small/Body Small, 600 */
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%; /* 16.8px */
+      }
+
+      .sold-count {
+        overflow: hidden;
+        color: var(--Gren-Gray-Scale-400, #7a9099);
+        text-align: right;
+        text-overflow: ellipsis;
+
+        /* Body Tiny/Body Tiny, 400 */
+        font-family: Poppins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%; /* 15.6px */
+      }
+    }
+  }
+}
