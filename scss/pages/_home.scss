@@ -226,3 +226,129 @@
     }
   }
 }
+
+.auth {
+  .modal-title {
+    color: var(--Gray-Scale-Gray-900, #1a1a1a);
+
+    /* Heading 05/Heading 05 — 600 */
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 38.4px */
+    text-align: center;
+    margin-top: 24px;
+  }
+  form {
+    @include flex-column;
+    gap: size(12);
+    padding-inline: 12px;
+  }
+
+  .inputwrapper {
+    input {
+      @include w100;
+      padding: 14px 16px;
+      color: var(--Gray-Scale-Gray-400, #999);
+      font-family: Poppins;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%; /* 20.8px */
+      border-radius: 6px;
+      @include transitionsall;
+      border: 1px solid var(--Gray-Scale-Gray-100, #e6e6e6);
+      background: var(--colors-nutral-white-white-main, #fff);
+      &:focus {
+        border-color: #33be7b;
+      }
+    }
+  }
+  .btnlogin {
+    button {
+      display: flex;
+      padding: 14px 32px;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      background-color: $brandingsuccess;
+      color: white;
+      @include w100;
+      border-radius: 43px;
+      color: var(
+        --Gray-Scale-White,
+        var(--colors-nutral-white-white-main, #fff)
+      );
+
+      /* Body Small/Body Small, 600 */
+      font-family: Poppins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 120%; /* 16.8px */
+      @include hover {
+        background-color: lighten($brandingsuccess, 10%);
+      }
+    }
+  }
+  .dont {
+    text-align: center;
+    color: var(--Gray-Scale-Gray-600, #666);
+
+    /* Body Small/Body Small, 400 */
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    a {
+      color: var(--Gray-Scale-Gray-900, #1a1a1a);
+
+      /* Body Small/Body Small, 500 */
+      font-family: Poppins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%; /* 21px */
+    }
+  }
+  .social {
+    padding-inline: 12px;
+    padding-bottom: 24px;
+    @include flex;
+    gap: size(20);
+    margin-top: size(40);
+    @include w100;
+
+    .btnfacebook {
+      @include flex;
+      padding: size(8);
+      flex-grow: 1;
+      gap: size(8);
+      border-radius: 4px;
+      color: white;
+      background: var(--Facebook, #1877f2);
+    }
+    .btngoogle {
+      flex-grow: 1;
+      @include flex;
+      align-items: center;
+      padding-right: size(8);
+      .icon {
+        padding: size(8);
+        border-radius: 2px;
+        border: 1px solid #4285f4;
+        background: var(--colors-nutral-white-white-main, #fff);
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.08),
+          0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+      }
+      @include flex;
+
+      gap: size(8);
+      border-radius: 4px;
+      color: white;
+      background: var(--Facebook, #1877f2);
+    }
+  }
+}
