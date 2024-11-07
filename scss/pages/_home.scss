@@ -344,7 +344,8 @@
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 21px */
-    a {
+    span {
+      cursor: pointer;
       color: var(--Gray-Scale-Gray-900, #1a1a1a);
 
       /* Body Small/Body Small, 500 */

@@ -1390,7 +1390,8 @@ header .headerbottom .profilebtn {
   font-weight: 400;
   line-height: 150%; /* 21px */
 }
-.auth .dont a {
+.auth .dont span {
+  cursor: pointer;
   color: var(--Gray-Scale-Gray-900, #1a1a1a);
   /* Body Small/Body Small, 500 */
   font-family: Poppins;
