@@ -1,6 +1,101 @@
 @use "../global" as *;
 @use "../partials" as *;
 
+// hero
+.categories-sidebar {
+  border-radius: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid var(--Gray-Scale-Gray-100, #e6e6e6);
+  background: var(--colors-nutral-white-white-main, #fff);
+}
+
+.categories-sidebar ul {
+  padding: 0;
+}
+
+.categories-sidebar ul li {
+  font-size: 16px;
+}
+
+.categories-sidebar ul li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  padding: 16px 20px;
+  border-radius: 5px;
+
+  /* Body Small/Body Small, 500 */
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 21px */
+  @include flex;
+  align-items: center;
+  gap: size(12);
+  @include transitionsall;
+}
+
+.categories-sidebar ul li a:hover {
+  background-color: $brandingsuccess; /* Highlight for active category */
+  color: #fff;
+  svg {
+    path {
+      fill: #fff;
+    }
+  }
+}
+
+/* Banner Styles */
+.banner {
+  position: relative;
+  &.banner-large {
+    width: 100%;
+    height: size(270);
+
+    padding-bottom: size(24);
+    padding-left: size(24);
+
+    img {
+      @include wh100;
+      object-fit: cover;
+    }
+  }
+  &.banner-small {
+    width: 100%;
+    padding-left: size(24);
+
+    height: size(230);
+    img {
+      @include wh100;
+      object-fit: cover;
+    }
+  }
+  &.banner-vertical {
+    width: 100%;
+    padding-left: size(24);
+
+    height: size(500);
+    img {
+      @include wh100;
+      object-fit: cover;
+    }
+  }
+}
+
+.banner img {
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+  .banner img {
+    width: 100%;
+  }
+}
+
 .products {
 }
 .productssections {
@@ -14,6 +109,7 @@
   overflow-x: hidden;
 }
 .productsection {
+  margin-bottom: size(30);
   border-radius: 10px;
   @include flex-column;
   gap: size(20);
@@ -23,6 +119,44 @@
   .section-top {
     @include flex-between;
     .left {
+      .eventbadges {
+        @include flex;
+        gap: size(9);
+        .hot {
+          padding: size(10) size(10);
+          gap: size(8);
+          flex-shrink: 0;
+          border-radius: 6px;
+          @include flex-center;
+          align-items: center;
+          span {
+            color: var(--colors-nutral-white-white-main, #fff);
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+          }
+          background: var(--Branding-Success, #33be7b);
+        }
+        .discount {
+          padding: size(10) size(10);
+          gap: size(8);
+          flex-shrink: 0;
+          border-radius: 6px;
+          @include flex-center;
+          align-items: center;
+          span {
+            color: var(--colors-nutral-white-white-main, #fff);
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+          }
+          background: $brandingerror;
+        }
+      }
       h4 {
         color: var(--Gren-Gray-Scale-700, #2b3d57);
         /* Body XL/Body XL, 500 */
