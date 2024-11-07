@@ -1296,6 +1296,16 @@ header .headerbottom .profilebtn {
   gap: 0.75rem;
   padding-inline: 12px;
 }
+.auth .inputwrapper.passwordfield {
+  position: relative;
+}
+.auth .inputwrapper.passwordfield .eye {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
 .auth .inputwrapper.remember {
   display: flex;
   align-items: center;

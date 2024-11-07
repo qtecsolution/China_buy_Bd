@@ -247,6 +247,16 @@
   }
 
   .inputwrapper {
+    &.passwordfield {
+      position: relative;
+      .eye {
+        position: absolute;
+        right: size(16);
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+    }
     &.remember {
       @include flex-between;
       align-items: center;
