@@ -27,7 +27,8 @@
                         </a>
                     </div>
                     <div class="searchbox">
-                        <input type="text" class="search-input" placeholder="What are you looking for ? ">
+                        <input type="text" class="search-input" id="searchInput"
+                            placeholder="What are you looking for ? ">
                         <div class="uploadbox">
                             <label for="uploadimage">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -2203,6 +2204,43 @@
             }
         }
         updateNavigationButtons(swiper);
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const input = document.getElementById("searchInput");
+            const texts = ["What are you looking for ?", "Search for products...", "Find your favorite items!"];
+            let index = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+
+            function typeEffect() {
+                // Get the current text to be displayed
+                const currentText = texts[index];
+
+                // Update the placeholder value based on the character index
+                if (isDeleting) {
+                    input.placeholder = currentText.substring(0, charIndex--);
+                } else {
+                    input.placeholder = currentText.substring(0, charIndex++);
+                }
+
+                // Check if the text is completed
+                if (!isDeleting && charIndex === currentText.length) {
+                    isDeleting = true;
+                    setTimeout(typeEffect, 1000); // Pause before deleting
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    index = (index + 1) % texts.length; // Move to the next text
+                    setTimeout(typeEffect, 500); // Pause before typing the next text
+                } else {
+                    setTimeout(typeEffect, isDeleting ? 50 : 100); // Typing and deleting speed
+                }
+            }
+
+            // Start the typing effect
+            typeEffect();
+        });
+
     </script>
 
 </body>
