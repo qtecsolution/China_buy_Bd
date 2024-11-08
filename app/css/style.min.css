@@ -1514,6 +1514,7 @@ header .headerbottom .profilebtn {
   border-radius: 8px;
   border: 1px solid var(--Gray-Scale-Gray-100, #e6e6e6);
   background: var(--colors-nutral-white-white-main, #fff);
+  margin-top: 3.75rem;
 }
 .cartwrapper .cartheader {
   background-color: #33be7b;
@@ -1539,9 +1540,15 @@ header .headerbottom .profilebtn {
 .cartwrapper .cartheader span:first-child {
   width: 20.625rem;
 }
+.cartwrapper .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
 .cartwrapper .cards .singlecart {
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid #e6e6e6;
 }
 .cartwrapper .cards .singlecart .sellerinfo {
   border-bottom: 1px solid var(--Gray-Scale-Gray-100, #e6e6e6);
@@ -1583,7 +1590,7 @@ header .headerbottom .profilebtn {
   position: relative;
   align-items: center;
 }
-.cartwrapper .cards .singlecart .products .product::after {
+.cartwrapper .cards .singlecart .products .product:not(:last-child)::after {
   content: "";
   position: absolute;
   display: block;

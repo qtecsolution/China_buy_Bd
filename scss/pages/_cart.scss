@@ -77,6 +77,7 @@
   border-radius: 8px;
   border: 1px solid var(--Gray-Scale-Gray-100, #e6e6e6);
   background: var(--colors-nutral-white-white-main, #fff);
+  margin-top: size(60);
   .cartheader {
     background-color: $brandingsuccess;
     @include flex;
@@ -107,8 +108,11 @@
     }
   }
   .cards {
+    @include flex-column;
+    gap: size(30);
     .singlecart {
       @include flex-column;
+      border-bottom: 1px solid #e6e6e6;
       // top row seller info
       .sellerinfo {
         border-bottom: 1px solid var(--Gray-Scale-Gray-100, #e6e6e6);
@@ -151,7 +155,7 @@
           position: relative;
           align-items: center;
 
-          &::after {
+          &:not(:last-child)::after {
             content: "";
             position: absolute;
             display: block;
