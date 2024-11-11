@@ -1996,6 +1996,7 @@ header .headerbottom .profilebtn {
   border-width: 1.5px;
 }
 .productdetails .productdetailscontent .rightdetails .buttons {
+  margin-block: 0.625rem;
   display: inline-flex;
   padding: 8px;
   justify-content: center;
@@ -2006,7 +2007,6 @@ header .headerbottom .profilebtn {
   background: var(--colors-nutral-white-white-main, #fff);
 }
 .productdetails .productdetailscontent .rightdetails .buttons button {
-  flex-grow: 1;
   width: 2.125rem;
   height: 2.125rem;
   display: flex;
@@ -2015,8 +2015,18 @@ header .headerbottom .profilebtn {
   border-radius: 170px;
   background: var(--Gray-Scale-Gray-50, #f2f2f2);
 }
+.productdetails .productdetailscontent .rightdetails .buttons button svg path {
+  -webkit-transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  -ms-transition: all 250ms ease-in-out;
+  -o-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
 .productdetails .productdetailscontent .rightdetails .buttons button:not([disabled]):hover {
   background-color: #33be7b;
+}
+.productdetails .productdetailscontent .rightdetails .buttons button:not([disabled]):hover svg path {
+  stroke: white;
 }
 .productdetails .productdetailscontent .rightdetails .buttons span {
   flex-grow: 1;
@@ -2057,6 +2067,21 @@ header .headerbottom .profilebtn {
   font-style: normal;
   font-weight: 500;
   line-height: 160%; /* 19.2px */
+}
+.productdetails .productdetailscontent .rightdetails .shiptable th,
+.productdetails .productdetailscontent .rightdetails .shiptable td {
+  background: #ecf6ec !important;
+}
+.productdetails .productdetailscontent .rightdetails .shiptable .fromship {
+  display: flex;
+}
+.productdetails .productdetailscontent .rightdetails .shiptable .fromship span {
+  color: var(--Gren-Gray-Scale-800, #172a3b);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 70% */
 }
 
 .printshop-container {

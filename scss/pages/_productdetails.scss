@@ -192,6 +192,7 @@
         }
       }
       .buttons {
+        margin-block: size(10);
         display: inline-flex;
         padding: 8px;
         justify-content: center;
@@ -201,13 +202,23 @@
         border: 1px solid var(--Gray-Scale-Gray-100, #e6e6e6);
         background: var(--colors-nutral-white-white-main, #fff);
         button {
-          flex-grow: 1;
+          //   flex-grow: 1;
           @include square(34);
           @include flex-center;
           border-radius: 170px;
           background: var(--Gray-Scale-Gray-50, #f2f2f2);
+          svg {
+            path {
+              @include transitionsall;
+            }
+          }
           @include hover {
             background-color: $brandingsuccess;
+            svg {
+              path {
+                stroke: white;
+              }
+            }
           }
         }
         span {
@@ -252,6 +263,23 @@
             font-style: normal;
             font-weight: 500;
             line-height: 160%; /* 19.2px */
+          }
+        }
+      }
+      .shiptable {
+        th,
+        td {
+          background: #ecf6ec !important;
+        }
+        .fromship {
+          @include flex;
+          span {
+            color: var(--Gren-Gray-Scale-800, #172a3b);
+            font-family: Poppins;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 14px; /* 70% */
           }
         }
       }
