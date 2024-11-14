@@ -1,0 +1,295 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.user-dashboard-nav {
+  .nav-link {
+    color: var(--Gray-Scale-Gray-600, #666);
+
+    /* Body Medium/Body Medium, 400 */
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    padding: 12px 20px;
+    .icon {
+      margin-right: 10px;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+    }
+  }
+  .active {
+    border-radius: 8px 8px 0px 0px;
+    background: var(--Branding-Success, $brandingsuccess);
+    box-shadow: 3px 0px 0px 0px #191919 inset;
+    color: white;
+  }
+}
+
+.user-info {
+  display: flex;
+  gap: 24px;
+  height: 278px;
+  .left {
+    flex-basis: 536px;
+    height: 100%;
+    padding: 32px 0px;
+    /* Profile Card Container */
+    .profile-card {
+      border-radius: 8px;
+      text-align: center;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    /* Profile Image */
+    .profile-image img {
+      width: 100px; /* Circle size */
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover; /* Maintain aspect ratio */
+      border: 3px solid #ddd;
+    }
+
+    /* Profile Info */
+    .profile-info h2 {
+      color: var(--Gray-Scale-Gray-900, #1a1a1a);
+      text-align: center;
+
+      /* Body XL/Body XL, 500 */
+      font-family: Poppins;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%; /* 30px */
+    }
+
+    .profile-info .role {
+      color: var(--Gray-Scale-Gray-500, #808080);
+      text-align: center;
+
+      /* Body Small/Body Small, 400 */
+      font-family: Poppins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 21px */
+      margin-bottom: 8px;
+    }
+
+    /* Edit Profile Button */
+    .edit-profile {
+      display: inline-block;
+      color: $brandingsuccess;
+      font-size: 0.9rem;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: 0.3s ease;
+    }
+
+    .edit-profile:hover {
+      background-color: $brandingsuccess;
+      color: #fff;
+    }
+  }
+  .right {
+    flex-basis: 412px;
+    height: 100%;
+  }
+}
+
+.address-card {
+  // border: 1px solid #ccc;
+  // border-radius: 5px;
+  padding: 20px;
+  background-color: #fff;
+  // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  .card-header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .card-title {
+      color: var(--Gray-Scale-Gray-400, #999);
+
+      /* CAPS LOCK/Medium Caps Lock */
+      font-family: Poppins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%; /* 14px */
+      letter-spacing: 0.42px;
+      text-transform: uppercase;
+    }
+
+    .default-button {
+      display: flex;
+      padding: 3.5px 9px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+      border: 1px solid var(--Gren-Gray-Scale-600, #405c6b);
+      background: var(--Gren-Gray-Scale-600, #405c6b);
+      color: var(
+        --Gray-Scale-White,
+        var(--colors-nutral-white-white-main, #fff)
+      );
+
+      /* Body Small/Body Small, 400 */
+      font-family: Poppins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 21px */
+    }
+  }
+
+  .card-body {
+    .card-name {
+      color: var(--Gray-Scale-Gray-900, #1a1a1a);
+
+      /* Body Large/Body Large, 500 */
+      font-family: Poppins;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%; /* 27px */
+    }
+
+    .card-address {
+      color: var(--Gray-Scale-Gray-600, #666);
+
+      /* Body Small/Body Small, 400 */
+      font-family: Poppins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 21px */
+      padding: 8px 0px;
+    }
+    .card-email,
+    .card-phone {
+      color: var(--Gray-Scale-Gray-900, #1a1a1a);
+
+      /* Body Medium/Body Medium, 400 */
+      font-family: Poppins;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 24px */
+      padding-bottom: 6px;
+    }
+  }
+
+  .card-footer {
+    display: flex;
+    // justify-content: space-between;
+    gap: 10px;
+
+    .edit-button {
+      display: inline-block;
+      color: $brandingsuccess;
+      font-size: 0.9rem;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: 0.3s ease;
+      &:hover {
+        background-color: $brandingsuccess;
+        color: #fff;
+      }
+    }
+
+    .add-button {
+      padding: 2 9px;
+      color: var(
+        --Gray-Scale-White,
+        var(--colors-nutral-white-white-main, #fff)
+      );
+
+      /* Body Small/Body Small, 400 */
+      font-family: Poppins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 21px */
+    }
+  }
+}
+
+// order-table.scss
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  thead {
+    th {
+      padding: 15px 20px;
+      text-align: left;
+      font-weight: bold;
+      border-bottom: 1px solid #ddd;
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        padding: 10px 20px;
+        border-bottom: 1px solid #ddd;
+
+        img {
+          width: 50px;
+          height: 50px;
+          object-fit: cover;
+          border-radius: 5px;
+          margin-right: 10px;
+        }
+
+        .status-span {
+          padding: 5px 10px;
+          border-radius: 5px;
+        }
+
+        .delivered-status {
+          background-color: #d4edda;
+          color: #0c5460;
+        }
+
+        .canceled-status {
+          background-color: #f8d7da;
+          color: #dc3545;
+        }
+
+        .pending-status {
+          background-color: #fff3cd;
+          color: #856404;
+        }
+
+        button {
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+
+        .paid-button {
+          background-color: #28a745;
+          color: #fff;
+        }
+
+        .make-payment-button {
+          background-color: #ffc107;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

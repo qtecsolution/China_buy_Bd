@@ -35,3 +35,17 @@
     }
   }
 }
+
+
+.breadcrumb-nav-dashboard{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: transparent;
+  margin-left: -6px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  .breadcrumb{
+    margin-bottom: 0px;
+  }
+}
